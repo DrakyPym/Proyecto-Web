@@ -1,0 +1,122 @@
+@font-face{
+    font-family: 'valegan';
+    src: url(valegan.otf);
+}
+@font-face{
+    font-family: 'cow';
+    src: url(Cow-Mix.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 63px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.carrito{
+    filter: invert(100%);
+    width: 45px;
+    height: auto;
+     color: white;
+    margin-right: 70px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  font-weight: bold;
+}
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 0px 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.header .head {
+  margin-bottom: 20px;
+}
+
+.navbar a:hover {
+   color: aqua;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.header {
+    height: 90vh ;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)),url(ban.jpg);
+    background-size: cover;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background: black;
+}
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header .titulo1 {
+  font-size: 180px;
+  color: #FFFF00;
+  text-align: center;
+  font-family: 'valegan';
+  text-shadow: 13px 13px 13px black;
+  margin-top: 230px;
+}
+
+.header .titulo2 {
+   font-size: 40px;
+  color: white;
+  text-align: center;
+  font-family: 'cow';
+  text-shadow: 8px 8px 8px black;
+  margin-top: 20px;
+}
+
+
+.content p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 150px;
+}
