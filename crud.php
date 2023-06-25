@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     header("Location: pagina_error.html");
@@ -13,6 +11,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <style>
         .container {
             display: flex;
@@ -31,11 +30,23 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
             border-radius: 4px;
             cursor: pointer;
         }
+
+        .logout-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <a href="index.php?logout=true" class="logout-button">Cerrar sesión</a>
         <button class="btn" onclick="window.location.href='altas.php'">Altas</button>
         <button class="btn" onclick="window.location.href='seleccion.php'">Modificaciones</button>
         <button class="btn" onclick="window.location.href='bajas.php'">Bajas</button>

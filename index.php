@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Cerrar sesión
+if (isset($_GET['logout'])) {
+    session_destroy();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +21,7 @@
 	<header class="header">
         <div class="head">
 	<nav class="navbar">
-            <a href="index.html">Inicio</a>
+            <a href="index.php">Inicio</a>
             <a href="contacto.php">Contacto</a>
             <a href="aboutus.html">Sobre nosotros</a>
             <a href="productos.html">Productos</a>
