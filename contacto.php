@@ -48,7 +48,7 @@ if (isset($_POST['Enviar'])) { //Verifica
             max-width: 400px;
             margin: 30% auto 0;
             /* Ajusta el margen superior para mover el formulario */
-            background-color: black;
+            background-color: #282828;
             padding: 20px;
             border-radius: 4px;
             border: 1px solid #fff;

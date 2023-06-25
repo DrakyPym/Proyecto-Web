@@ -48,7 +48,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <div class="container">
         <a href="index.php?logout=true" class="logout-button">Cerrar sesión</a>
         <button class="btn" onclick="window.location.href='altas.php'">Altas</button>
-        <button class="btn" onclick="window.location.href='seleccion.php'">Modificaciones</button>
+        <button class="btn" onclick="window.location.href='modificaciones.php'">Modificaciones</button>
         <button class="btn" onclick="window.location.href='bajas.php'">Bajas</button>
         <button class="btn" onclick="window.location.href='listado.php'">Listados</button>
     </div>
