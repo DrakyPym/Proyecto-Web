@@ -141,7 +141,7 @@ if (isset($_POST['Enviar'])) { //Verifica
     </div>
     <script>
         function redirectToPage() {
-            window.location.href = "crud.php";
+            window.location.href = "login.html";
         }
     </script>
 </body>
