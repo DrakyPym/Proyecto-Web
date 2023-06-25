@@ -108,8 +108,8 @@ if (isset($_POST['Enviar'])) { //Verifica
 <body>
     <div class="head">
         <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.php">Inicio</a>
+            <a href="#">Contacto</a>
             <a href="aboutus.html">Sobre nosotros</a>
             <a href="productos.html">Productos</a>
             <a href="#">Precio</a>

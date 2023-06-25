@@ -113,6 +113,8 @@ if (isset($_POST['Enviar'])) { //Verifica
             color: white;
             border: none;
             cursor: pointer;
+            float: right;
+            margin-right: 5%;
         }
 
         .btn {
@@ -149,8 +151,8 @@ if (isset($_POST['Enviar'])) { //Verifica
 <body>
     <div class="head">
         <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.php">Inicio</a>
+            <a href="contacto.php">Contacto</a>
             <a href="aboutus.html">Sobre nosotros</a>
             <a href="productos.html">Productos</a>
             <a href="#">Precio</a>
@@ -159,6 +161,7 @@ if (isset($_POST['Enviar'])) { //Verifica
     <div class="container">
         <a href="index.php?logout=true" class="logout-button">Cerrar sesión</a>
     </div>
+    <button onclick="redirectToPage()">Regresar</button>
     <div class="content">
         <form action="" method="POST">
             <h2>Formulario de contacto</h2>
@@ -182,7 +185,7 @@ if (isset($_POST['Enviar'])) { //Verifica
     </div>
     <script>
         function redirectToPage() {
-            window.location.href = "login.html";
+            window.location.href = "crud.php";
         }
     </script>
 </body>

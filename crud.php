@@ -50,7 +50,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
         <button class="btn" onclick="window.location.href='altas.php'">Altas</button>
         <button class="btn" onclick="window.location.href='seleccion.php'">Modificaciones</button>
         <button class="btn" onclick="window.location.href='bajas.php'">Bajas</button>
-        <button class="btn" onclick="window.location.href='listados.php'">Listados</button>
+        <button class="btn" onclick="window.location.href='listado.php'">Listados</button>
     </div>
 </body>
 
