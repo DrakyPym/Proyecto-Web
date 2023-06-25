@@ -1,3 +1,25 @@
+<?php
+if (isset($_POST['Enviar'])) { //Verifica 
+    require_once("db.php");
+    $sql = $conex->prepare("INSERT INTO contacto (email,telefono,asunto,nombre,mensaje) VALUES (?, ?, ?, ?, ?)"); //Prepara la consulta
+    $email = $_POST['email'];
+    $telefono = $_POST['telefono'];
+    $asunto = $_POST['asunto'];
+    $nombre = $_POST['nombre'];
+    $mensaje = $_POST['mensaje'];
+
+    $sql->bind_param("sssss", $email, $telefono, $asunto, $nombre, $mensaje); //Asigna los parametros
+
+    if ($sql->execute()) { //Ejecuta la consulta
+        $success_message = "Added Successfully";
+    } else {
+        $error_message = "Problem in Adding New Record";
+    }
+    $sql->close();
+    $conex->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,9 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Shortcut Icon" type="image/x-icon" href="icono.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="app.js" async></script>
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="style.css">
@@ -19,13 +39,14 @@
             color: white;
         }
 
-        h1 {
+        h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
 
         form {
             max-width: 400px;
-            margin: 40% auto 0;
+            margin: 30% auto 0;
             /* Ajusta el margen superior para mover el formulario */
             background-color: black;
             padding: 20px;
@@ -65,6 +86,20 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        .container {
+            text-align: right;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5% auto 0;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
     <script src="app.js" async></script>
     <title>FIT GENERATION</title>
@@ -80,9 +115,12 @@
             <a href="#">Precio</a>
         </nav>
     </div>
+    <div class="container">
+        <button onclick="redirectToPage()">Administrador</button>
+    </div>
     <div class="content">
-
-        <form action="enviar.php" method="POST">
+        <form action="" method="POST">
+            <h2>Formulario de contacto</h2>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -98,9 +136,14 @@
             <label for="mensaje">Mensaje:</label><br>
             <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea><br><br>
 
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" name="Enviar">
         </form>
     </div>
+    <script>
+        function redirectToPage() {
+            window.location.href = "crud.php";
+        }
+    </script>
 </body>
 
 </html>
