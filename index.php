@@ -26,6 +26,7 @@ if (isset($_GET['logout'])) {
             <a href="contacto.php">Contacto</a>
             <a href="aboutus.html">Sobre nosotros</a>
             <a href="productos.html">Productos</a>
+            <a href="blog.html">Blog</a>
             <a href="#">Precio</a>
         </nav>
        <a href="contacto.php"><img class="carrito" src="carrito-de-compras.png" alt="carrito" ></a>

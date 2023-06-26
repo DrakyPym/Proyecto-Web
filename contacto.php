@@ -112,6 +112,7 @@ if (isset($_POST['Enviar'])) { //Verifica
             <a href="#">Contacto</a>
             <a href="aboutus.html">Sobre nosotros</a>
             <a href="productos.html">Productos</a>
+            <a href="blog.html">Blog</a>
             <a href="#">Precio</a>
         </nav>
     </div>
