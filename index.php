@@ -1,3 +1,7 @@
+<!--Integrantes del equipo-
+Espinosa de los Monteros Martinez Eric Omar
+Zurita Cariño Emmanuel Einar
+Cortes Velazquez Samuel Alejandro-->
 <?php
 session_start();
 
